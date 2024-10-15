@@ -1,15 +1,15 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import net.salesianosLaCuesta.utils.ProcessLauncher;
 import net.salesianosLaCuesta.utils.fileManager;
-import net.salesianosLaCuesta.utils.processLauncher;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
         final String INPUT_ROUTE = "./src/input.txt";
 
         ArrayList<String> phrases = new ArrayList<>();
