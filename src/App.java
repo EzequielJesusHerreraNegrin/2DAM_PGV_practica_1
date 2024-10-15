@@ -3,6 +3,8 @@ import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+import net.salesianosLaCuesta.utils.processLauncher;
+
 public class App {
 
     public static void main(String[] args) {
@@ -19,6 +21,16 @@ public class App {
             reader.close();
         } catch (Exception e) {
             System.out.println("Error: no se puede extraer el contenido de: " + INPUT_ROUTE);
+        }
+
+        ArrayList<Process> phraseSubProcess = new ArrayList<>();
+        for (int i = 0; i < phrases.size(); i++) {
+            Process subProcess = processLauncher.initOperation(phrases.get(i), "upgradedPhrase" + i + ".txt");
+            phraseSubProcess.add(subProcess);
+        }
+
+        for (Process process : phraseSubProcess) {
+            process.waitFor();
         }
     }
 }
