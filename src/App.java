@@ -3,6 +3,8 @@ import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+import net.salesianosLaCuesta.utils.ProcessLauncher;
+import net.salesianosLaCuesta.utils.fileManager;
 import net.salesianosLaCuesta.utils.processLauncher;
 
 public class App {
@@ -25,12 +27,16 @@ public class App {
 
         ArrayList<Process> phraseSubProcess = new ArrayList<>();
         for (int i = 0; i < phrases.size(); i++) {
-            Process subProcess = processLauncher.initOperation(phrases.get(i), "upgradedPhrase" + i + ".txt");
+            Process subProcess = ProcessLauncher.initOperation(phrases.get(i), "upgradedPhrase" + i + ".txt");
             phraseSubProcess.add(subProcess);
         }
 
         for (Process process : phraseSubProcess) {
-            process.waitFor();
+            process.waitFor();  
         }
+
+        fileManager.readAndWrite();
     }
+
+
 }

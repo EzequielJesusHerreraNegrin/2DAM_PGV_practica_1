@@ -3,7 +3,7 @@ package net.salesianosLaCuesta.utils;
 import java.io.File;
 import java.io.IOException;
 
-public class processLauncher {
+public class ProcessLauncher {
 
     private static final String OPERATIONS_ROUTE = "./src/net/salesianosLaCuesta/function/operations.java";
 
