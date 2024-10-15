@@ -1,0 +1,11 @@
+NOMBRE,ALTRUA,PESO
+Carlos Garcia,1.80,75
+Ana Martinez,1.65,60
+Javier Lopez,1.75,68
+Laura Fernandez,1.60,55
+Marcos Diaz,1.85,82
+Sofia Ramirez,1.70,63
+Miguel Torres,1.77,70
+Isabel Ruiz,1.68,58
+Andres Perez,1.73,65
+Paula Gomez,1.62,57
